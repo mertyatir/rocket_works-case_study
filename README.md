@@ -101,7 +101,6 @@ npm install
    }:
    ```
 
-```
 
 5. Add a new web app to Firebase and copy the credentials.
 6. Add the credentials to .env.local file at the root of your project:
@@ -119,10 +118,30 @@ NEXT_PUBLIC_BASE_URL=
 
 ```
 
-Configuring Braintree
+7. Generate new private key from firebase project settings/service accounts
+8. Download and add json file to functions/src/secrets with name:
 
-1.Obtain Braintree credentials from https://www.braintreegateway.com
-2.dd the credentials to the .env file in the functions directory:
+```
+
+rocketworks-assignment-firebase-adminsdk.json
+
+```
+
+
+9. Upgrade to Blaze plan
+10. Activeate firebase functions
+11. Deploy functions with
+
+```
+
+firebase deploy
+
+```
+
+## Configuring Braintree
+
+1. Obtain Braintree credentials from https://www.braintreegateway.com
+2. Add the credentials to the .env file in the functions directory:
 
 ```
 
@@ -138,39 +157,9 @@ MY_APP_FIREBASE_APP_ID=
 
 ```
 
-deploy functions with (cd /functions):
-
-```
-
-firebase deploy
-
-```
-
 start next app with:
 
 ```
-
 npm run dev
-
-```
-
-generate new private key from firebase project settings/service accounts
-download and add json file to functions/src/secrets with name:
-
-```
-
-rocketworks-assignment-firebase-adminsdk.json
-
-```
-
-upgrade to Blaze plan
-activeate firebase functions
-deploy functions with
-
-```
-
-firebase deploy
-
-```
 
 ```
